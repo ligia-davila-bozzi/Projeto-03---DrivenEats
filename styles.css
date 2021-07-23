@@ -49,12 +49,13 @@ body {
     margin-bottom: 27px;
     display: flex;
     background-color: #E5E5E5;
+    overflow-x: scroll;
+    
 }
 
 .itens {
     width: 172px;
     background-color: #FFFFFF;
-    margin-right: 16px;
     display: flex;
     flex-direction: column;
     border-radius: 9px;
