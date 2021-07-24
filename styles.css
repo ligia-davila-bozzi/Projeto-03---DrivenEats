@@ -25,11 +25,11 @@ body {
     font-family: 'Righteous', cursive;
 }
 
-.MargemEsq {
+.Margem-Esq {
     margin-left: 21px;
 }
 
-.subLogo {
+.sub-Logo {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
@@ -39,7 +39,7 @@ body {
     margin-bottom: 108px;
 }
 
-.topScroll {
+.top-Scroll {
     font-size: 26px;
     font-family: 'Righteous', cursive;
 }
@@ -137,8 +137,9 @@ ion-icon{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.pedido {
+.Botao-Pedido {
     width: 87.922%;
+    height: 61px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     border-radius: 50px;
@@ -147,15 +148,18 @@ ion-icon{
     color: #FFFFFF;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-/* .FecharPedido {
+.Fechar-Pedido {
     width: 87.922%;
+    height: 61px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     border-radius: 50px;
     border: none;
-    background-color: #50D074;
+    background: #32B72F;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
-} */
+    align-items: center;
+}
