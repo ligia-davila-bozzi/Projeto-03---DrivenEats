@@ -68,7 +68,7 @@ function FinalizaPedido (){
     let Total = (Number (valorComid) + Number (valorBebid) + Number (valorSobremes));
     Total = Total.toFixed (2);
     let MensagemWpp = encodeURIComponent(`Olá, gostaria de fazer o pedido:
-    - Prato: ${ComidaSelect.}
+    - Prato: ${ComidaSelect}
     - Bebida: ${BebidaSelect}
     - Sobremesa: ${SobremesaSelect}
     Total: ${Total}`);
