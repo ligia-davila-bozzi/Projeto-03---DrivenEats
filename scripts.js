@@ -8,30 +8,31 @@ const ComidaSelect = document.querySelector(".comidas > .produto").innerHTML;
 const BebidaSelect = document.querySelector(".bebidas > .produto").innerHTML;
 const SobremesaSelect = document.querySelector(".sobremesas > .produto").innerHTML;
 
-valorComida = Number(tiraVirgula (valorComida));
-valorBebida = Number(tiraVirgula (valorBebida));
-valorSobremesa = Number(tiraVirgula (valorSobremesa));
+valorComida = valorComida.replace(",",".");
+valorBebida = valorBebida.replace(",",".");
+valorSobremesa = valorSobremesa.replace(",",".");
 
 const Total = (valorComida + valorBebida + valorSobremesa);
 
-function tiraVirgula (string){
-    let valor;
-    for (let i=0; i<string.length){
-        if (string[i] !== ","){
-            valor [i] = string[i];
-        } else {
-            valor [i] = ".";
-        }
-    }
-    return valor;
-}
+// function tiraVirgula (string){
+//     let valor;
+//     for (let i=0; i<string.length){
+//         if (string[i] !== ","){
+//             valor [i] = string[i];
+//         } else {
+//             valor [i] = ".";
+//         }
+//     }
+//     return valor;
+// }
 
 
 
 
 
 function ComidaSelecionada(ComidaClick) {
-        if (comidinha !== null) {
+    const comidinha = document.querySelector(".comidas");
+    if (comidinha !== null) {
         comidinha.classList.toggle("comidas");
     }
 
@@ -41,6 +42,7 @@ function ComidaSelecionada(ComidaClick) {
 
 
 function BebidaSelecionada(BebidaClick) {
+    const bebidinha = document.querySelector(".bebidas");
     if (bebidinha !== null) {
         bebidinha.classList.toggle("bebidas");
     }
@@ -50,6 +52,7 @@ function BebidaSelecionada(BebidaClick) {
 }
 
 function SobremesaSelecionada(SobremesaClick) {
+    const sobremesinha = document.querySelector(".sobremesas");
     if (sobremesinha !== null) {
         sobremesinha.classList.toggle("sobremesas");
     }
@@ -59,7 +62,9 @@ function SobremesaSelecionada(SobremesaClick) {
 }
 
 function AtivaBotao() {
-
+    const comidinha = document.querySelector(".comidas");
+    const bebidinha = document.querySelector(".bebidas");
+    const sobremesinha = document.querySelector(".sobremesas");
     const botao = document.querySelector(".Botao-Pedido");
     let i = 0;
   
@@ -87,7 +92,7 @@ function FinalizaPedido (){
     - Sobremesa: ${SobremesaSelect}
     Total: ${Total}`);
 
-    window.open(`https://wa.me/5521994114784?text=${mensagemWpp}`, "_self");
+    window.open(`https://wa.me/5521994114784?text=${MensagemWpp}`, "_self");
 
 }
 
