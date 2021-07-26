@@ -85,7 +85,7 @@ function AtivaBotao() {
      }
   }
 
-function FinalizaPedido (){
+function FinalizaPedido (finaliza){
     let MensagemWpp = encodeURIComponent(`Olá, gostaria de fazer o pedido:
     - Prato: ${ComidaSelect}
     - Bebida: ${BebidaSelect}
