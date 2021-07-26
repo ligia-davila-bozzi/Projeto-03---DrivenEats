@@ -150,6 +150,10 @@ ion-icon{
     justify-content: center;
     align-items: center;
 }
+
+.desabilitado {
+    display: none;
+}
 .Fechar-Pedido {
     width: 87.922%;
     height: 61px;
@@ -162,4 +166,5 @@ ion-icon{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }

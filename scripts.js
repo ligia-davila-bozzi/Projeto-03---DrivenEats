@@ -1,6 +1,6 @@
 function ComidaSelecionada(ComidaClick) {
     const comidinha = document.querySelector(".comidas");
-    if (comidinha !== null){
+    if (comidinha !== null) {
         comidinha.classList.toggle("comidas");
     }
 
@@ -11,7 +11,7 @@ function ComidaSelecionada(ComidaClick) {
 
 function BebidaSelecionada(BebidaClick) {
     const bebidinha = document.querySelector(".bebidas");
-    if (bebidinha !== null){
+    if (bebidinha !== null) {
         bebidinha.classList.toggle("bebidas");
     }
 
@@ -21,7 +21,7 @@ function BebidaSelecionada(BebidaClick) {
 
 function SobremesaSelecionada(SobremesaClick) {
     const sobremesinha = document.querySelector(".sobremesas");
-    if (sobremesinha !== null){
+    if (sobremesinha !== null) {
         sobremesinha.classList.toggle("sobremesas");
     }
 
@@ -34,21 +34,33 @@ function AtivaBotao() {
     const bebidinha = document.querySelector(".bebidas");
     const sobremesinha = document.querySelector(".sobremesas");
     const botao = document.querySelector(".Botao-Pedido");
+    const novobotao = document.querySelector(".desabilitado");
     let i = 0;
-    
-    if (comidinha !== null){
+
+    if (comidinha !== null) {
         i += 1;
     }
-    if (bebidinha !== null){
+    if (bebidinha !== null) {
         i += 1;
     }
-    if (sobremesinha !== null){
+    if (sobremesinha !== null) {
         i += 1;
     }
-    if(i === 3){
+    if (i === 3) {
         //troca botão de finalizar pedido
-        botao.innerHTML = "Fechar Pedido";
         botao.classList.remove("Botao-Pedido");
-        botao.classList.add("Fechar-Pedido");
+        botao.classList.add("desabilitado");
+        novobotao.classList.remove("desabilitado");
+        novobotao.classList.add("Fechar-Pedido");
     }
 }
+
+
+
+
+/*
+criar mensagem
+fazer calculos da mensagem
+fazer link do wpp
+associar ao botão
+*/
