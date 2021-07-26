@@ -1,4 +1,3 @@
-
 function ComidaSelecionada(ComidaClick) {
     const comidinha = document.querySelector(".comidas");
     if (comidinha !== null) {
@@ -62,11 +61,11 @@ function FinalizaPedido (){
     const BebidaSelect = document.querySelector(".bebidas > .produto").innerHTML;
     const SobremesaSelect = document.querySelector(".sobremesas > .produto").innerHTML;
 
-    valorComida = valorComida.replace(",",".");
-    valorBebida = valorBebida.replace(",",".");
-    valorSobremesa = valorSobremesa.replace(",",".");
+    valorComid = Number (valorComida.replace(",","."));
+    valorBebid = Number (valorBebida.replace(",","."));
+    valorSobremes = Number (valorSobremesa.replace(",","."));
 
-    const Total = (valorComida + valorBebida + valorSobremesa);
+    const Total = (Number (valorComid) + Number (valorBebid) + Number (valorSobremes));
     let MensagemWpp = encodeURIComponent(`Olá, gostaria de fazer o pedido:
     - Prato: ${ComidaSelect}
     - Bebida: ${BebidaSelect}
